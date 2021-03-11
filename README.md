@@ -47,7 +47,7 @@ New Banker Job with functionnalities such as loans, savings with custom rates, r
  
 2. Clone the repository
 ``` git
-git clone https://github.com/BenoursonJ/esx_bankerjob esx_bankerjob
+git clone https://github.com/BenoursonJ/ESX-Banker-Job-Upgraded esx_bankerjob
 ```
 3. Import esx_bankerjob.sql in your database
 
