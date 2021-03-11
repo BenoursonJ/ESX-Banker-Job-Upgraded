@@ -48,8 +48,10 @@ git clone https://github.com/BenoursonJ/esx_bankerjob esx_bankerjob
 3. Import esx_bankerjob.sql in your database
 
 4. Configure the config.lua file (do not forget to modify the authorized vehicles)
+ 
+5. Modify the multiple "TriggerClientEvent('esx:showNotification" in server.lua to translate them to your liking.
 
-5. Add this in your server.cfg after cron, async, mysql-async and esx_society:
+6. Add this in your server.cfg after cron, async, mysql-async and esx_society:
 
 ``` lua
 ensure esx_bankerjob
