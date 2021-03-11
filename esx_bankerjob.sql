@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `bank_lent_money` (
   `advisorFirstname` varchar(255) DEFAULT NULL,
   `advisorLastname` varchar(255) DEFAULT NULL,
   `status` varchar(255) NOT NULL DEFAULT 'Ouvert'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
 
 CREATE TABLE IF NOT EXISTS `bank_savings` (
