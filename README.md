@@ -9,19 +9,22 @@ New Banker Job with functionnalities such as loans, savings with custom rates, r
 
 * **Make loans and manage them** from the office inside the Pacific Standard Bank
   * **Powerful loan attribution system** : Define the amount given, the rate, the amount of deadlines, the time between deadlines
-  * **Automatic loan management system** : every morning at 01:10 a.m two cron tasks run :
+  * **Automatic loan management system** : every morning at defined time in config.lua two cron tasks run :
     * 1. Countdown of the time remaining before a player must repay part of his loan
     * 2. Automatic payment of a deadline if the user has enough money on his bank account otherwise the account is frozen
   * **View all | the active | the frozen loans and manage them**
 
 * **Open savings accounts** with a custom rate defined in percentages (1 - 100)
   * **View** the active and closed accounts and manage them
-  * **Automatic savings system** : once a week a cron task runs calculating the interests
+  * **Automatic savings system** : once a week on the day defined in config.lua a cron task runs calculating the interests
+  * **Choose** if the money is generated or removed from the company bank account
  
 * **Open risked savings accounts** 
   * **View** the active and closed accounts and manage them
-  * **Automatic savings system** : once a week a cron task runs calculating the interests
+  * **Automatic savings system** : once a week on the day defined in config.lua a cron task runs calculating the interests
     * **Custom rates** : a custom rate that can be defined in the config.lua file is randomly chosen and applied to a risked savings account... living the life on the edge?
+  * **Choose** if the money is generated or removed from the company bank account
+
 
 ***
 
@@ -34,6 +37,7 @@ New Banker Job with functionnalities such as loans, savings with custom rates, r
 * esx_society      : https://github.com/esx-framework/esx_society
 * async            : https://github.com/esx-framework/async
 * mysql-async      : https://github.com/brouznouf/fivem-mysql-async
+* cron             : https://github.com/esx-framework/cron
 
 ***
 
@@ -64,7 +68,12 @@ ensure esx_bankerjob
 * **Config.Locale**       | Text language (currently supported: fr and en).
 * **Config.CompanyPlate** | Prefix that will be displayed on the number plate of company cars.
 * **Config.RiskedRates**	| Rates that can be defined in the array for the risked savings accounts. Value is multiplied with the total money on the account.
+* **Config.SavingsAccountRemove** | True or False. If true, money removed from the company bank account, false, money is generated.
 * **Config.SavingsDay**	  | Day on which to do the interests on the savings and risked savings accounts.
+* **Config.CRONSavingsTime** | Time {HH, mm} at which the Savings task is to be executed.
+* **Config.CRONRiskedSavingsTime** | Time {HH, mm} at which the Risked Savings task is to be executed.
+* **Config.CRONLoanDeadlineTime** | Time {HH, mm} at which the Deadline Countdown task is to be executed.
+* **Config.CRONLoanTime** | Time {HH, mm} at which the deadline payment task is to be executed.
 
 * **Config.Zones** | Array listing the zones that will be drawn:
   * **ZoneName** | Marker name
