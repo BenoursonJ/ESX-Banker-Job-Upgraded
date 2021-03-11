@@ -1,4 +1,4 @@
-# esx_bankerjob
+# ESX Banker Job Upgraded [esx_bankerjob]
 
 New Banker Job with functionnalities such as loans, savings with custom rates, risked savings, inventory and so on...
 
