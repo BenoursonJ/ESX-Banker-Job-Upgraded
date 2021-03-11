@@ -2,6 +2,8 @@
 
 New Banker Job with functionnalities such as loans, savings with custom rates, risked savings, inventory and so on...
 
+![ESX Banker Job Upgraded](https://repository-images.githubusercontent.com/346621827/078ab680-825e-11eb-8284-e0ad3d766ef1)
+
 ***
 
 ## [FEATURES]
