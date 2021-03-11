@@ -21,7 +21,7 @@ INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_
 ;
 
 
-CREATE TABLE `bank_lent_money` IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS `bank_lent_money` (
   `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `firstname` varchar(255) DEFAULT NULL,
   `lastname` varchar(255) NOT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `bank_savings` (
   `rate` double NOT NULL,
   `advisorFirstname` varchar(255) DEFAULT NULL,
   `advisorLastname` varchar(255) DEFAULT NULL,
-  `status` varchar(255) NOT NULL DEFAULT 'Ouvert',
+  `status` varchar(255) NOT NULL DEFAULT 'Ouvert'
 );
 
 CREATE TABLE IF NOT EXISTS `bank_riskedsavings` (
@@ -58,6 +58,5 @@ CREATE TABLE IF NOT EXISTS `bank_riskedsavings` (
   `tot` double DEFAULT NULL,
   `advisorFirstname` varchar(255) DEFAULT NULL,
   `advisorLastname` varchar(255) DEFAULT NULL,
-  `status` varchar(255) NOT NULL DEFAULT 'Ouvert',
-  PRIMARY KEY (`id`)
+  `status` varchar(255) NOT NULL DEFAULT 'Ouvert'
 );
