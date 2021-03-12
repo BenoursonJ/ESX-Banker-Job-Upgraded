@@ -1,27 +1,28 @@
 INSERT INTO `addon_account` (name, label, shared) VALUES
-	('society_banker','Banque', 1)
+	('society_banker', 'Banco', 1)
 ;
+
 INSERT INTO `addon_inventory` (name, label, shared) VALUES
-	('society_banker','Banque', 1)
+	('society_banker', 'Banco', 1)
 ;
+
 INSERT INTO `datastore` (name, label, shared) VALUES
-	('society_banker','Banque', 1)
+	('society_banker', 'Banco', 1)
 ;
+
 INSERT INTO `jobs` (name, label) VALUES
-	('banker','Banquier')
+	('banker', 'Banqueiro')
 ;
 
-DELETE FROM `job_grades` WHERE job_grades.job_name = 'banker';
 INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
-	('banker',0,'conveyor','Convoyeur',100,'{}','{}'),
-	('banker',1,'conveyor_boss','Resp. Convoyeur',200,'{}','{}'),
-	('banker',2,'banker',"Banquier",300,'{}','{}'),
-	('banker',3,'advisor','Conseiller',400,'{}','{}'),
-	('banker',4,'boss','PDG',500,'{}','{}')
+	('banker',0,'conveyor','Convoyeur',60,'{}','{}'),
+	('banker',1,'conveyor_boss','Resp. Convoyeur',70,'{}','{}'),
+	('banker',2,'banker','Banquier',80,'{}','{}'),
+	('banker',3,'advisor','Conseiller',90,'{}','{}'),
+	('banker',4,'boss','PDG',100,'{}','{}')
 ;
 
-
-CREATE TABLE IF NOT EXISTS `bank_lent_money` (
+CREATE TABLE `bank_lent_money` (
   `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `firstname` varchar(255) DEFAULT NULL,
   `lastname` varchar(255) NOT NULL,
@@ -37,10 +38,9 @@ CREATE TABLE IF NOT EXISTS `bank_lent_money` (
   `advisorFirstname` varchar(255) DEFAULT NULL,
   `advisorLastname` varchar(255) DEFAULT NULL,
   `status` varchar(255) NOT NULL DEFAULT 'Ouvert'
-);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
-CREATE TABLE IF NOT EXISTS `bank_savings` (
+CREATE TABLE `bank_savings` (
   `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `firstname` varchar(255) DEFAULT NULL,
   `lastname` varchar(255) NOT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `bank_savings` (
   `status` varchar(255) NOT NULL DEFAULT 'Ouvert'
 );
 
-CREATE TABLE IF NOT EXISTS `bank_riskedsavings` (
+CREATE TABLE `bank_riskedsavings` (
   `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `firstname` varchar(255) DEFAULT NULL,
   `lastname` varchar(255) NOT NULL,
